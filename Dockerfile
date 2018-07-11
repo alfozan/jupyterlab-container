@@ -9,7 +9,7 @@ RUN pip3 install jupyterlab
 RUN pip3 install pandas matplotlib numpy scipy boto3
 
 # install common tools
-RUN apt-get update && apt-get install -y git curl wget zip iputils-ping dnsutils netcat-openbsd nano bash-completion
+RUN apt-get update && apt-get install -y git curl wget zip iputils-ping dnsutils netcat-openbsd nano bash-completion sudo
 
 # jupyterhub integration
 # https://github.com/jupyterhub/jupyterlab-hub
