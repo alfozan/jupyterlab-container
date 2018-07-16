@@ -21,6 +21,8 @@ RUN apt-get remove --purge -y nodejs npm && apt-get autoremove -y
 
 # add PySpark kernel
 ADD pyspark /usr/local/share/jupyter/kernels/pyspark
+# install bash kernel
+RUN pip3 install bash_kernel && python3 -m bash_kernel.install
 
 # set environment variables
 ENV SPARK_HOME=/spark
